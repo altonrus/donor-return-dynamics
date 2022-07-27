@@ -1,5 +1,5 @@
 ---
-title: Paper title
+title: Differences in time to return after temporary deferral for donors at mobile vs. fixed collect sites
 author: 
 output: 
   officedown::rdocx_document:
@@ -17,7 +17,7 @@ header-includes:
 
 \newcommand{\1}{\textbf{1}}
 
-W. Alton Russell^1^, others
+Huzhah Jagirdar^1^, W. Alton Russell^1^
 
 <br>
 
@@ -84,11 +84,22 @@ sourcestr_t_samp <- gen_tab_sourcestr(df_samp$Source)
 
 # Introduction
 
-> Citation [@Langham2018a]
+> The problem. What is none
+
+> More lit review
+
+> In this study, we ....
 
 <br>
 
 # Methods
+
+## Data and preprocessing
+
+## Time to return (kaplan meyer)
+
+## Penalized Cox model
+
 
 > See `r run_reference("t-sample")` `r sourcestr_t_samp` and \@ref(tab:t-sample-2).
 
