@@ -1,0 +1,12 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+local
+1_data/private
+3_intermediate/private
+4_output/private
+.DS_Store
+1_data/.DS_Store
+3_intermediate/.DS_Store
+4_output/.DS_Store
