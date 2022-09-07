@@ -6,7 +6,7 @@ output:
     mapstyles:
       Normal: ['First Paragraph']
     reference_docx: word-style-reference-manuscript.docx
-bibliography: bib.bib
+bibliography: interdonation-interval.bib
 csl: american-medical-association-brackets.csl
 
 header-includes:
