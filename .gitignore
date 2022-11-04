@@ -4,6 +4,7 @@
 .Ruserdata
 local
 1_data/private
+1_data/local
 3_intermediate/private
 4_output/private
 .DS_Store
