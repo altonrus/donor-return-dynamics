@@ -25,7 +25,7 @@ Observations:
 
 Then I read in the rest of the data
 ```{r}
-#t_donations <- fread("../1_data/private/SANBS Donations (3 Nov 2022).csv")
+t_donations <- fread("../1_data/private/SANBS Donations (3 Nov 2022).csv")
 #t_donations <- fread("../1_data/private/SANBS Donations (3 Nov 2022).csv", skip = 4371067)
 ```
 
