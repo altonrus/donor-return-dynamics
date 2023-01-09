@@ -17,7 +17,7 @@ header-includes:
 
 \newcommand{\1}{\textbf{1}}
 
-Huzhah Jagirdar^1^, W. Alton Russell^1^
+Huzbah Jagirdar^1^, W. Alton Russell^1^
 
 <br>
 
@@ -84,11 +84,13 @@ sourcestr_t_samp <- gen_tab_sourcestr(df_samp$Source)
 
 # Introduction
 
-> The problem. What is none
 
-> More lit review
+>Blood collection sites often issue a haemoglobin deferral to donors when tested for low haemoglobin levels. Making an informed decision about potential changes to such deferrals and their eligibility criteria requires understanding how haemoglobin deferral policies may impact long-term donor return behaviour. Most medical care depends on a steady blood supply to meet urgent care needs in healthcare facilities. By modelling the donor return dynamics, we can estimate the impact of having different inter-donation interval policies. This will help blood collection sites tailor donor deferral policies to manage the risk of iron deficiency in donors while avoiding blood shortages.
 
-> In this study, we ....
+>It is shown that additional deferral decreases the donor’s likelihood to return for a donation (Clement et al., 2021). This suggests the importance of blood banks evaluating their deferral policies and understanding the significance of encouraging donors to return promptly once eligible. Further research also shows that besides individual factors, collection site characteristics are essential in predicting the differences in donor return behaviour. A multilevel model was used to show that return varied across collection sites, and fixed sites were associated with higher donor satisfaction and the likelihood of donor return (Merz et al.,2017) . The return has been associated with factors such as repeat donor status, older age, higher educational attainment, being born in the United States and donation at fixed sites (Custer et al., 2011). A 2012 study investigated the effects of fixed or mobile donation with differing sponsor types on donation return time and found the lowest return time among fixed-site donors and those alternating between fixed and mobile sites (Carey et al., 2012). However, mobile collection sites represent a large share of blood collection in many countries and as blood centres around the world consider changes to donor deferral criteria, understanding the impact on donor return behaviour, particularly mobile donors, is critical to make certain policy changes will not threaten the fragile blood supply.
+
+>In this study, we use blood donor data from the US (Vitalant) and South Africa (SANBS) to improve understanding of donor return dynamics at mobile and fixed collection sites to inform blood donor management policy. We use a Kaplan Meier model to evaluate the time to return of the donor to fixed versus mobile collection sites, and a LASSO penalized cox proportional hazard model to anlyse the association between time to return and predictor variables such as age, sex, education level, donor history and so on. 
+
 
 <br>
 
