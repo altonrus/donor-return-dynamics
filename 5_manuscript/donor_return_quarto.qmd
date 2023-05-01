@@ -1,5 +1,6 @@
 ---
-title: "Change in hemoglobin as a novel marker for incident iron deficiency in blood donors"
+title: ": Donor Return Behavior in South Africa and the US: A Comparison between Mobile and Fixed Site Blood Drives.
+"
 format:
   docx: 
     reference-doc: word-style-reference-manuscript.docx
@@ -42,11 +43,13 @@ moment but it's being actively worked on. To install latest package version, use
 
 --->
 ```
-W. Alton Russell^1^, others
+
+Huzbah Jagirdar^1^, Ronel Swanevelder^2^, Karin van den Berg^2^ , Pheello Lethola^2^, Riana Cockeran^2^, W. Alton Russell^1^
 
 <br>
 
 ^1^School of Population and Global Health, McGill University, Montreal, Canada
+^2^South Africa National Blood Service, Johannesburg, Gauteng, South Africa
 
 <br>
 
@@ -116,20 +119,40 @@ Blood collection sites often issue a haemoglobin deferral to donors when tested 
 
 >In this study, we use blood donor data from the US (Vitalant) and South Africa (SANBS) to improve understanding of donor return dynamics at mobile and fixed collection sites to inform blood donor management policy. We use a Kaplan Meier model to evaluate the time to return of the donor to fixed versus mobile collection sites, and a LASSO penalized cox proportional hazard model to anlyse the association between time to return and predictor variables such as age, sex, education level, donor history and so on. 
 
-
 {{< pagebreak >}}
 
 # Methods
 
-## Subsection
+## Data
+describe sanbs data
+- Demographic information (age, sex, education, race/ethnicity), donation environment (fixed and mobile), and other characteristics (donation date, donation procedure, and donor outcome) were extracted from 2017-2022
+- how outcome type was derived
+2015-2017 used to construct donation history - briefly describe varibales
+- data was right censored
+- fixed return pattern explain
+- WB imputation
 
-A
+Vitalant
+
+## Statistical Analysis
+- explain exclusions vriteria
+- explain stratifications according to first time donors, outcome type
+
+
+## Kaplan Meier Analysis
+- explain different models
+- uncertainity analysis using bootstrapping
+
+## Lasso Penalised Cox Proportional Hazards Analysis
+- variable used as covariates
+
 
 <br>
 
 # Results
 
-A
+
+
 
 <br>
 
