@@ -1,27 +1,245 @@
 ---
-title: "Donor Return Dynamics"
-author: "Huzbah Jagirdar"
-format: docx
+title: "Change in hemoglobin as a novel marker for incident iron deficiency in blood donors"
+format:
+  docx: 
+    reference-doc: word-style-reference-manuscript.docx
+  html: default
+bibliography: bib.bib
+csl: american-medical-association-brackets.csl
 editor: visual
+crossref: 
+  thm-title: "Table"
+  thm-prefix: "Table"
+  cor-title: "Table S"
+  cor-prefix: "Table S"
+  lem-title: "Figure S"
+  lem-prefix: "Figure S"
+  fig-title: "**Figure**"
 ---
 
-## Quarto
+```{=html}
+<!---
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+NOTES:
+-   To render both word and HTML, can type this into terminal
 
-## Running Code
+quarto render 5_manuscript/manuscript.qmd
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+-   There are limits in cross-referencing in Quarto. The table
+   Caption doesn't work well with flextable package, and 
+  There's no option for secondary (supplemental) series of 
+  tables or figures. As workaround, we repurpose other
+  series.I'm using
+        @thm- for tables (Table X)
+        @cor- for supplemental tables (Table SX)
+        @lem- for supplemental figures (Figure SX)
+  The space between "S" and the number for supplemental figures seems unavoidable
+   for now. Can manually correct before submitting to journal.
+        
+Flextable package isn't playing nicely with quarto for crossreferencing at the 
+moment but it's being actively worked on. To install latest package version, use 
+  devtools::install_github("davidgohel/flextable")
 
-```{r}
-1 + 1
+--->
+```
+W. Alton Russell^1^, others
+
+<br>
+
+^1^School of Population and Global Health, McGill University, Montreal, Canada
+
+<br>
+
+**Corresponding author:**
+
+**Key words:**
+
+**Running title:**
+
+{{< pagebreak >}}
+
+```{r setup, include=FALSE}
+library(ggplot2) #plots
+library(data.table) #for using datatables instead of frames
+library(scales) #formatting plot legends and text
+library(readxl) #read.excel
+library(flextable) #generating tables
+library(ftExtra)
+library(officedown) #formatting for word
+library(officer)
+library(stringr)
+theme_set(theme_bw())
+knitr::opts_chunk$set(
+  echo       = FALSE,
+  message    = FALSE,
+  warning    = FALSE
+)
+
+#takes table column containing references for sources
+gen_tab_sourcestr <- function(sources_raw){
+  sources <- str_match(sources_raw, ".*\\[@\\s*(.*?)\\s*\\]")[,2]
+  #remove NA
+  sources <- sources[!is.na(sources)]
+  #attack '@
+  sources <- paste0("@", sources)
+  #add commas
+  sources[-length(sources)] <- paste0(sources[-length(sources)], "; ")
+  sources <- paste0("[", paste0(sources, collapse=""), "]")
+  return(sources)
+}
+
 ```
 
-You can add options to executable code like this
-
 ```{r}
-#| echo: false
-2 * 2
+df_samp <- read_excel("../1_data/tables.xlsx", sheet = "sample")
+sourcestr_t_samp <- gen_tab_sourcestr(df_samp$Source)
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+# Abstract
+
+**Background:** A
+
+**Methods:** A
+
+**Results:** A
+
+**Conclusions:** A
+
+{{< pagebreak >}}
+
+# Introduction
+
+Citation [@Langham2018a]. See @fig-sample, @cor-sample, @thm-sample, and @lem-sample.
+Blood collection sites often issue a haemoglobin deferral to donors when tested for low haemoglobin levels. Making an informed decision about potential changes to such deferrals and their eligibility criteria requires understanding how haemoglobin deferral policies may impact long-term donor return behaviour. Most medical care depends on a steady blood supply to meet urgent care needs in healthcare facilities. By modelling the donor return dynamics, we can estimate the impact of having different inter-donation interval policies. This will help blood collection sites tailor donor deferral policies to manage the risk of iron deficiency in donors while avoiding blood shortages.
+
+>It is shown that additional deferral decreases the donor’s likelihood to return for a donation (Clement et al., 2021). This suggests the importance of blood banks evaluating their deferral policies and understanding the significance of encouraging donors to return promptly once eligible. Further research also shows that besides individual factors, collection site characteristics are essential in predicting the differences in donor return behaviour. A multilevel model was used to show that return varied across collection sites, and fixed sites were associated with higher donor satisfaction and the likelihood of donor return (Merz et al.,2017) . The return has been associated with factors such as repeat donor status, older age, higher educational attainment, being born in the United States and donation at fixed sites (Custer et al., 2011). A 2012 study investigated the effects of fixed or mobile donation with differing sponsor types on donation return time and found the lowest return time among fixed-site donors and those alternating between fixed and mobile sites (Carey et al., 2012). However, mobile collection sites represent a large share of blood collection in many countries and as blood centres around the world consider changes to donor deferral criteria, understanding the impact on donor return behaviour, particularly mobile donors, is critical to make certain policy changes will not threaten the fragile blood supply.
+
+>In this study, we use blood donor data from the US (Vitalant) and South Africa (SANBS) to improve understanding of donor return dynamics at mobile and fixed collection sites to inform blood donor management policy. We use a Kaplan Meier model to evaluate the time to return of the donor to fixed versus mobile collection sites, and a LASSO penalized cox proportional hazard model to anlyse the association between time to return and predictor variables such as age, sex, education level, donor history and so on. 
+
+
+{{< pagebreak >}}
+
+# Methods
+
+## Subsection
+
+A
+
+<br>
+
+# Results
+
+A
+
+<br>
+
+# Discussion
+
+A
+
+<br>
+
+{{< pagebreak >}}
+
+# Declarations
+
+**Funding:** A
+
+**Conflicts:** A
+
+**Ethics/Consent:** A
+
+**Data and materials:** A
+
+**Code availability:** A
+
+**Authors' contributions: A**
+
+{{< pagebreak >}}
+
+# References
+
+::: {#refs}
+:::
+
+{{< pagebreak >}}
+
+# Tables
+
+::: {#thm-sample}
+Table caption here.
+
+```{r}
+t_samp <- as_flextable(as_grouped_data(df_samp,
+                                              groups = "subhead"))
+t_samp <- compose(t_samp, i = ~ !is.na(subhead), j = "col1",
+              value = as_paragraph(as_chunk(subhead)))
+t_samp <- fontsize(t_samp, size = 10, part = "all")
+t_samp <- font(t_samp, fontname = "Times", part = "all")
+t_samp <- theme_box(t_samp)
+t_samp <- bg(t_samp, bg = "#EAEAEA", part = "header")
+t_samp <- width(t_samp, 1, 1.7)
+t_samp <- bg(t_samp, i = c(1, 4), bg = "#DDDDDD", part = "body")
+t_samp <- bold(t_samp, i = c(1, 4), part = "body")
+t_samp <- align(t_samp, align = "left", part = "all")
+
+t_samp
+```
+:::
+
+{{< pagebreak >}}
+
+# Figures
+
+```{r}
+#| label: fig-sample
+#| fig-cap: "Figure caption here."
+
+knitr::include_graphics("../4_output/figs/figure.png")
+
+```
+
+{{< pagebreak >}}
+
+# Supplemental materials
+
+<br>
+
+# A. Supplement section
+
+{{< pagebreak >}}
+
+# Supplemental tables
+
+::: {#cor-sample}
+Table caption here.
+
+```{r}
+t_samp <- as_flextable(as_grouped_data(df_samp,
+                                              groups = "subhead"))
+t_samp <- compose(t_samp, i = ~ !is.na(subhead), j = "col1",
+              value = as_paragraph(as_chunk(subhead)))
+t_samp <- fontsize(t_samp, size = 10, part = "all")
+t_samp <- font(t_samp, fontname = "Times", part = "all")
+t_samp <- theme_box(t_samp)
+t_samp <- bg(t_samp, bg = "#EAEAEA", part = "header")
+t_samp <- width(t_samp, 1, 1.7)
+t_samp <- bg(t_samp, i = c(1, 4), bg = "#DDDDDD", part = "body")
+t_samp <- bold(t_samp, i = c(1, 4), part = "body")
+t_samp <- align(t_samp, align = "left", part = "all")
+
+t_samp
+```
+:::
+
+{{< pagebreak >}}
+
+# Supplemental figures
+
+::: {#lem-sample}
+Figure caption here.
+
+```{r}
+knitr::include_graphics("../4_output/figs/figure.png")
+```
+:::
