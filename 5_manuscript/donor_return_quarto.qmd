@@ -124,22 +124,22 @@ Citation [@Langham2018a]. See @fig-sample, @cor-sample, @thm-sample, and @lem-sa
 
 ## Data
 
->Data from South African National Blood Service from the year 2017 to 2022 were included in this analysis. Demographic information (age, sex, education, race/ethnicity), donation environment (fixed and mobile), and other characteristics (blood type, donation date, donation procedure, and donation outcome) were extracted. Data from the year 2015 to 2017 was used to create donor history variables such as red blood cells loss in the last 12 months, red blood cells lost in the last 24 months, days since last red blood cell loss, and days since last double red blood cell loss. 
+>Data from South African National Blood Service from the year 2017 to 2022 were included in this analysis. Demographic information (age, sex, education, race/ethnicity), donation environment (fixed and mobile), and other characteristics (blood type, donation date, donation procedure, and donation outcome) were extracted. Data from the year 2015 to 2017 was used to create donor history variables such as red blood cells loss in the last 12 months, red blood cells lost in the last 24 months, units of red blood cell lost,  days since last red blood cell loss, and days since last double red blood cell loss. 
 
 >Outcome type was generated for each visit based on the deferral code and status of donation as either completed donation, hemoglobin deferral or other deferral. Time until return was calculated from the day the donor was eligible to donate again (56 days inter donation interval after a completed whole blood or red blood apheresis donation or as determined by the collection site for deferrals). The data was right-censored due to the end of data collection period or no return.. Additionally, a 'fixed-mobile pattern' variable was defined for each visit as: (1) returning to a fixed site after donation at a fixed site (FF), (2) returning to a mobile drive after donation at a fixed site (FM), (3) returning to a fixed site after donation at a mobile drive (MF), and (4) returning to a mobile drive after donation at a mobile drive (MM).
 
 >Only donors who donated or intended to donate a whole blood product or a red blood cell apheresis product were included in the analysis. Furthermore, donors who received permanent deferrals were excluded entirely. Observations with negative return times (returning before the eligible date) were excluded for the analysis (<1%). Deferred observations with a missing donation product were imputed as 'Whole Blood (WB),' if previous or next donation was 'WB' or if the donor has only donated a whole blood product.
 
-- WB imputation for SANBS detailed - add in appendix
-
-- Vitalant data 
+Add in appendix
+- SANBS specific: WB imputation, deferral ends dates ending after 2022 not included 
+- Vitalant specific:  
 
 
 ## Kaplan Meier Analysis
->An analysis of donor return times stratified by outcome type (compeleted donation, hemoglobin deferral, and other deferral) was conducted using Kaplan Meier analysis. It compared the median return times between different outcomes, while controlling for censoring. Separate models were developed for different donation environments i.e. fixed collection site and mobile drive, and for first time and repeat donors, to more accurately estimate median return time.
+>An analysis of donor return times stratified by outcome type (completed donation, hemoglobin deferral, and other deferral) was conducted using Kaplan Meier analysis. It compared the median return times between different outcomes, while controlling for censoring. Separate models were developed for different donation environments i.e. fixed collection site and mobile drive, and for first time and repeat donors, to more accurately estimate median return time.
 
 ## Lasso Penalised Cox Proportional Hazards Analysis
->A lasso penalized Cox Proportional Hazards model was implemented to determine factors influencing donor return time. Predictor in the analysis included donation environment (fixed or mobile), outcome type, race, sex, age at the time of the visit, donation product, first time donor status and donor history measures. Interaction terms between first time donors, fixed collection site and hemoglobin deferral were also included. All data analyses were conducted using Python programming language (Version 3.11.3).
+>A lasso penalized Cox Proportional Hazards model was implemented to determine factors influencing donor return time. Why lasso penalty? Predictor in the analysis included donation environment (fixed or mobile), outcome type, race, sex, age at the time of the visit, donation product, first time donor status and donor history measures. Interaction terms between first time donors, fixed collection site and hemoglobin deferral were also included. All data analyses were conducted using Python programming language (Version 3.11.3).
 
 
 <br>
