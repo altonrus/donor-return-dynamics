@@ -130,6 +130,9 @@ Citation [@Langham2018a]. See @fig-sample, @cor-sample, @thm-sample, and @lem-sa
 
 >Only donors who donated or intended to donate a whole blood product or a red blood cell apheresis product were included in the analysis. Furthermore, donors who received permanent deferrals were excluded entirely. Observations with negative return times (returning before the eligible date) were excluded for the analysis (<1%). Deferred observations with a missing donation product were imputed as 'Whole Blood (WB),' if previous or next donation was 'WB' or if the donor has only donated a whole blood product.
 
+Remove anyone with 60 days between the end of eligibility and the end of data collection
+
+
 Add in appendix
 - SANBS specific: WB imputation, deferral ends dates ending after 2022 not included 
 - Vitalant specific:  
