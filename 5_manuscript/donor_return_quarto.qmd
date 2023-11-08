@@ -1,5 +1,5 @@
 ---
-title: "Donor Return Behavior in South Africa and the US: A Comparison between Mobile and Fixed Site Blood Drives."
+title: "Donor Return Behavior in South Africa and the United States: A Comparison between Mobile and Fixed Site Blood Drives."
 format:
   docx: 
     reference-doc: word-style-reference-manuscript.docx
@@ -43,20 +43,23 @@ moment but it's being actively worked on. To install latest package version, use
 --->
 ```
 
-Huzbah Jagirdar^1^, Ronel Swanevelder^2^, Karin van den Berg^2^ , Pheello Lethola^2^, Riana Cockeran^2^, W. Alton Russell^1^
+Huzbah Jagirdar^1^, Ronel Swanevelder^2^, Karin van den Berg^2^ , Pheello Lethola^2^, Riana Cockeran^2^, Roberta Brun^3,5^,Zhanna Kaidarova^4^, Marjorie D. 
+Bravo^4^, Brian S. Custer^3,5^,  W. Alton Russell^1^
 
 <br>
 
 >^1^School of Population and Global Health, McGill University, Montreal, Canada
 >^2^South Africa National Blood Service, Johannesburg, Gauteng, South Africa
-
+>^3^Vitalant Research Institute
+>^4^Vitalant
+>^5^Department of Laboratory Medicine, University of California San Francisco
 <br>
 
 **Corresponding author:**
 
 **Key words:**
 
-**Running title:** Donor Return Behavior in South Africa and the US: A Comparison between Mobile and Fixed Site Blood Drives
+**Running title:** Donor Return Behavior in South Africa and the United States: A Comparison between Mobile and Fixed Site Blood Drives
 
 {{< pagebreak >}}
 
@@ -112,11 +115,13 @@ sourcestr_t_samp <- gen_tab_sourcestr(df_samp$Source)
 # Introduction
 
 Citation [@Langham2018a]. See @fig-sample, @cor-sample, @thm-sample, and @lem-sample.
->Blood collection sites often issue a haemoglobin deferral to donors when tested for low haemoglobin levels. Making an informed decision about potential changes to such deferrals and their eligibility criteria requires understanding how haemoglobin deferral policies may impact long-term donor return behaviour. Most medical care depends on a steady blood supply to meet urgent care needs in healthcare facilities. By modelling the donor return dynamics, we can estimate the impact of having different inter-donation interval policies. This will help blood collection sites tailor donor deferral policies to manage the risk of iron deficiency in donors while avoiding blood shortages.
+>Modern health systems depend on a steady blood supply to meet urgent care needs in healthcare facilities. Blood donors have to undergo thorough medical, clinical and laboratory screening to ensure their welfare and safety as well as that of transfusion recipients. Therefore, blood collection sites have strict eligibility criteria that they adhere to, and donors who do not meet them are issued a temporary or permanent deferral. A donor who receives a permanent deferral for various reasons (such as a positive test for Hepatitis B or HIV) will never be eligible to donate blood. However, when a donor receives a temporary deferral (such as for travel or a recent vaccine), they are deemed ineligible for a short period of time and are allowed to return to donate once the period has passed. It is shown that every additional deferral decreases the donor’s likelihood of returning for a donation (Clement M, et al., 2021).
 
->It is shown that additional deferral decreases the donor’s likelihood to return for a donation (Clement et al., 2021). This suggests the importance of blood banks evaluating their deferral policies and understanding the significance of encouraging donors to return promptly once eligible. Further research also shows that besides individual factors, collection site characteristics are essential in predicting the differences in donor return behaviour. A multilevel model was used to show that return varied across collection sites, and fixed sites were associated with higher donor satisfaction and the likelihood of donor return (Merz et al.,2017) . The return has been associated with factors such as repeat donor status, older age, higher educational attainment, being born in the United States and donation at fixed sites (Custer et al., 2011). A 2012 study investigated the effects of fixed or mobile donation with differing sponsor types on donation return time and found the lowest return time among fixed-site donors and those alternating between fixed and mobile sites (Carey et al., 2012). However, mobile collection sites represent a large share of blood collection in many countries and as blood centres around the world consider changes to donor deferral criteria, understanding the impact on donor return behaviour, particularly mobile donors, is critical to make certain policy changes will not threaten the fragile blood supply.
+>One of the most common temporary deferrals is for low haemoglobin levels. Blood collection sites issue haemoglobin deferrals to donors whose fingerstick haemoglobin levels are below a threshold (below 13.0 mg/L for male donors and 12.5 mg/L for female).Low haemoglobin deferrals have a very strong effect on return behaviour for first-time and repeat donors (Hillgrove et al., 2011).  Previous studies found that donors who are deferred for low haemoglobin at the first attempted donation are very unlikely to ever return to try to donate (Mast et al., 2010; Custer et al., 2011). This suggests the importance of blood banks evaluating their deferral policies and understanding the significance of encouraging donors to return promptly once eligible. 
 
->In this study, we use blood donor data from the US (Vitalant) and South Africa (SANBS) to improve understanding of donor return dynamics at mobile and fixed collection sites to inform blood donor management policy. We use a Kaplan Meier model to evaluate the time to return of the donor to fixed versus mobile collection sites, and a LASSO penalized cox proportional hazard model to anlyse the association between time to return and predictor variables such as age, sex, education level, donor history and so on. 
+>Further research shows that besides individual factors, collection site characteristics are essential in predicting the differences in donor return behaviour. Using a multilevel model, a Dutch study found that returns varied across collection sites, and fixed sites were associated with higher donor satisfaction and likelihood of donor return (Merz et al.,2017). Donor return has been associated with factors such as repeat donor status, older age, higher educational attainment, birth in the United States and donation at fixed sites (Custer et al., 2011). A 2012 U.S. study investigated the effects of fixed or mobile donation with differing sponsor types on donation return time and found the shortest return time among fixed-site donors and those alternating between fixed and mobile sites (Carey PM, et al., 2012). However, mobile collection sites represent a large share of blood collection in many countries and as blood centres around the world consider changes to donor deferral criteria, understanding the impact on donor return behaviour, particularly mobile donors, is critical to make certain policy changes will not threaten the fragile blood supply.
+
+>Blood centres also impose an interval between successful donations containing a single red blood cell unit to reduce the risk of iron deficiency in donors (56 days in the US and South Africa). This allows donors to donate a maximum of five times a year. The ageing donor base and loss of donors during the COVID-19 pandemic have made it harder for blood centres to retain donors and meet blood collection requirements. Therefore, making an informed decision about potential changes to inter-donation intervals and deferral policies while preventing donor iron deficiency depends on how such policies impact long-term returns. In this study, we use operational blood donor data from the United States and South Africa to improve understanding of donor return dynamics at mobile and fixed collection sites during pre- and intra-COVID-19 periods to inform blood donor management policy. 
 
 {{< pagebreak >}}
 
@@ -124,26 +129,22 @@ Citation [@Langham2018a]. See @fig-sample, @cor-sample, @thm-sample, and @lem-sa
 
 ## Data
 
->Data from South African National Blood Service from the year 2017 to 2022 were included in this analysis. Demographic information (age, sex, education, race/ethnicity), donation environment (fixed and mobile), and other characteristics (blood type, donation date, donation procedure, and donation outcome) were extracted. Data from the year 2015 to 2017 was used to create donor history variables such as red blood cells loss in the last 12 months, red blood cells lost in the last 24 months, units of red blood cell lost,  days since last red blood cell loss, and days since last double red blood cell loss. 
+>We used operational data from the South African National Blood Service (SANBS), South Africa, and Vitalant, United States (US).  SANBS is the largest blood collector in South Africa, and Vitalant is the second-largest blood collector in the US. All donations are voluntary and non-remunerated. We included donor visits from the year 2017 to 2022 in this analysis. We extracted demographic information (age, sex, education, race/ethnicity, height, weight), donation environment (fixed or mobile), and other characteristics (blood type, reason for deferral, haemoglobin value, donation date, donation procedure, and donation outcome). Donor visits from the years 2015 to 2017 were used to create donor history variables such as units of red blood cell loss in the last 12 months and 24 months since the index donation, days since the last red blood cell loss, and days since the last double red blood cell loss, and cumulative lifetime donations.  
 
->Outcome type was generated for each visit based on the deferral code and status of donation as either completed donation, hemoglobin deferral or other deferral. Time until return was calculated from the day the donor was eligible to donate again (56 days inter donation interval after a completed whole blood or red blood apheresis donation or as determined by the collection site for deferrals). The data was right-censored due to the end of data collection period or no return.. Additionally, a 'fixed-mobile pattern' variable was defined for each visit as: (1) returning to a fixed site after donation at a fixed site (FF), (2) returning to a mobile drive after donation at a fixed site (FM), (3) returning to a fixed site after donation at a mobile drive (MF), and (4) returning to a mobile drive after donation at a mobile drive (MM).
+>We classified the outcome for each visit based on the reason for deferral, haemoglobin value and status of donation as either (1) completed donation, (2) haemoglobin deferral or (3) other deferrals. Time until return was calculated from the day the donor was eligible to donate again, their “eligibility date” (figure 1). The eligibility date is 56 days after a completed whole blood donation. For deferrals, the eligibility date is the end of the deferral period (1 day in the US; 3 to 6 months in South Africa). The data was right-censored due to the end of the data collection period or no return. Additionally, a 'fixed-mobile pattern' variable was defined for each visit as: (1) returning to a fixed site after donation at a fixed site (FF), (2) returning to a mobile drive after donation at a fixed site (FM), (3) returning to a fixed site after donation at a mobile drive (MF), and (4) returning to a mobile drive after donation at a mobile drive (MM).
 
->Only donors who donated or intended to donate a whole blood product or a red blood cell apheresis product were included in the analysis. Furthermore, donors who received permanent deferrals were excluded entirely. Observations with negative return times (returning before the eligible date) were excluded for the analysis (<1%). Deferred observations with a missing donation product were imputed as 'Whole Blood (WB),' if previous or next donation was 'WB' or if the donor has only donated a whole blood product.
-
-Remove anyone with 60 days between the end of eligibility and the end of data collection
-
-
-Add in appendix
-- SANBS specific: WB imputation, deferral ends dates ending after 2022 not included 
-- Vitalant specific:  
+>We analysed the return after a donation that was a whole blood product (red blood cell donations were excluded due to a longer inter-donation interval) between the years 2017 to 2022. Only allogeneic donations (when a donor and a recipient are not the same person) were included as the index donation. Furthermore, donors who received permanent deferrals were excluded entirely. 
 
 
 ## Kaplan Meier Analysis
->An analysis of donor return times stratified by outcome type (completed donation, hemoglobin deferral, and other deferral) was conducted using Kaplan Meier analysis. It compared the median return times between different outcomes, while controlling for censoring. Separate models were developed for different donation environments i.e. fixed collection site and mobile drive, and for first time and repeat donors, to more accurately estimate median return time.
+>An analysis of donor returns times stratified by outcome type (completed donation, haemoglobin deferral, and other deferrals) was conducted using Kaplan Meier analysis. It determines the time of first return, and cumulative pattern of return and estimates the survival function for different outcomes while controlling for right censoring.
+
+## Cumulative Incidence Functions
+> To analyse switching between mobile and fixed donation environments, we developed survival curves stratified by fixed–mobile pattern to determine the pattern of return between donation environments and the loyalty donors have to the collection site type. In this case, since we are looking at competing events (returning to mobile drive vs. returning to a fixed site), we utilised cause-specific cumulative incidence functions (CIF). We developed separate models for first-time and repeat donors, and the outcomes, haemoglobin deferral and completed donation.
 
 ## Lasso Penalised Cox Proportional Hazards Analysis
->A lasso penalized Cox Proportional Hazards model was implemented to determine factors influencing donor return time. Why lasso penalty? Predictor in the analysis included donation environment (fixed or mobile), outcome type, race, sex, age at the time of the visit, donation product, first time donor status and donor history measures. Interaction terms between first time donors, fixed collection site and hemoglobin deferral were also included. All data analyses were conducted using Python programming language (Version 3.11.3).
-
+>We implemented four penalised Cox Proportional Hazards models with a lasso penalty to determine factors influencing donor return time. We added a lasso penalty term to the model to decrease complexity, and mitigate the impact of collinearity among predictors by shrinking the less relevant predictors towards zero, thereby performing feature selection (Srinivasan S, et al., 2017). We developed separate models for fixed sites and mobile drives during the pre- and intra-pandemic (COVID-19) periods. Predictors in the analysis included outcome type, race, sex, age at the time of the visit, blood type, height, weight, country of birth, education level, haemoglobin level at the time of donation, donation product, first-time donor status, and donor history variables such as red blood cell loss in the last 12 and 24 months, and cumulative lifetime donations. Covariates indicating whether the donor is a teenager, and the opportunities to donate at the same mobile drive were included. Interaction terms between first-time donors and haemoglobin deferrals were also included.  
+We conducted all data analyses using Python (Version 3.11.3).
 
 <br>
 
@@ -161,8 +162,6 @@ median return time was longer: 138 days at fixed sites and 190 days at mobile dr
 time after a haemoglobin deferral was longer: 225 days at a fixed site and 259 days at mobile drives. In our proportional
 hazard mode, visiting a fixed collection site was associated with a shorter time to return (log hazard ratio of 0.46) and
 haemoglobin deferral was associated with a longer time to return (log hazard ratio of -0.44).
-
-
 
 <br>
 
@@ -239,8 +238,11 @@ knitr::include_graphics("../4_output/figs/figure.png")
 <br>
 
 # A. Supplement section
+We imputed deferred observations with unknown donation products as “Whole Blood (WB)” if the most proximal subsequent or previous donation (for which the donation procedure was not unknown) was ‘WB’. We also assumed that the intended donation was ‘Whole Blood’ if the donor only ever had deferred visits or if it was a first-time donor with a deferred visit since whole blood is the most common donation procedure.
+
 
 {{< pagebreak >}}
+
 
 # Supplemental tables
 

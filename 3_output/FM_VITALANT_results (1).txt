@@ -1,0 +1,447 @@
+                             Covariate  Hazard Ratio     Lower     Upper
+0                DONOR_AGE_AT_DONATION      1.016016  1.015887  1.016145
+1                           first_time      0.361072  0.357473  0.364708
+2               cum_lifetime_donations      1.013580  1.004816  1.022421
+3              rbc_loss_last_12_months      1.037373  0.993007  1.083720
+4              rbc_loss_last_24_months      1.025433  0.998600  1.052987
+5                         DONOR_WEIGHT      1.001634  1.001598  1.001670
+6                         DONOR_HEIGHT      1.008278  1.008161  1.008396
+7                     DONOR_BORN_IN_US      1.616395  1.607239  1.625604
+8                       DONOR_GENDER_F      0.905052  0.901336  0.908784
+9                 RACE_ETHNICITY_Asian      0.803182  0.792225  0.814290
+10                RACE_ETHNICITY_Black      0.741504  0.730895  0.752267
+11             RACE_ETHNICITY_Hispanic      0.771973  0.766981  0.776998
+12          RACE_ETHNICITY_Mixed_Other      0.824973  0.804968  0.845476
+13      RACE_ETHNICITY_Native_American      0.857724  0.833724  0.882415
+14                OUTCOME_TYPE_No_Draw      0.471572  0.467745  0.475431
+15                OUTCOME_TYPE_low_hgb      0.944466  0.936011  0.952998
+16         OUTCOME_TYPE_other_deferral      0.611837  0.603221  0.620576
+17                   DONOR_ABORH_ABneg      0.859707  0.829418  0.891102
+18                   DONOR_ABORH_ABpos      0.814632  0.801686  0.827786
+19                    DONOR_ABORH_Aneg      1.071837  1.062507  1.081249
+20                    DONOR_ABORH_Apos      1.040063  1.035383  1.044764
+21                    DONOR_ABORH_Bneg      1.081831  1.064903  1.099027
+22                    DONOR_ABORH_Bpos      0.996795  0.989661  1.003981
+23                    DONOR_ABORH_Oneg      1.135486  1.128239  1.142781
+24  DONOR_EDU_Currently_in_High_School      0.419677  0.412374  0.427110
+25       DONOR_EDU_Less_than_secondary      0.668319  0.658608  0.678172
+26     DONOR_EDU_Secondary_High_School      1.005019  0.998410  1.011673
+27                      first_time_hgb      0.270127  0.253346  0.288019
+                             Covariate  Hazard Ratio     Lower     Upper
+0                DONOR_AGE_AT_DONATION      1.023345  1.023245  1.023445
+1                           first_time      0.331968  0.330358  0.333586
+2               cum_lifetime_donations      0.999220  0.990025  1.008501
+3              rbc_loss_last_12_months      1.012141  0.976009  1.049612
+4              rbc_loss_last_24_months      1.006945  0.985691  1.028657
+5                         DONOR_WEIGHT      1.003351  1.003323  1.003379
+6                         DONOR_HEIGHT      1.008623  1.008545  1.008700
+7                     DONOR_BORN_IN_US      1.583423  1.576548  1.590329
+8                       DONOR_GENDER_F      0.997453  0.993767  1.001152
+9                 RACE_ETHNICITY_Asian      0.705535  0.696965  0.714210
+10                RACE_ETHNICITY_Black      0.557810  0.551675  0.564014
+11             RACE_ETHNICITY_Hispanic      0.672812  0.669233  0.676410
+12          RACE_ETHNICITY_Mixed_Other      0.716764  0.699872  0.734064
+13      RACE_ETHNICITY_Native_American      0.808561  0.792188  0.825271
+14                OUTCOME_TYPE_No_Draw      0.421277  0.418238  0.424338
+15                OUTCOME_TYPE_low_hgb      0.810886  0.803393  0.818449
+16         OUTCOME_TYPE_other_deferral      0.456469  0.450883  0.462123
+17                   DONOR_ABORH_ABneg      1.067484  1.039698  1.096013
+18                   DONOR_ABORH_ABpos      0.903220  0.892489  0.914080
+19                    DONOR_ABORH_Aneg      1.270951  1.261277  1.280700
+20                    DONOR_ABORH_Apos      1.228672  1.223957  1.233406
+21                    DONOR_ABORH_Bneg      1.200003  1.182422  1.217846
+22                    DONOR_ABORH_Bpos      1.076038  1.069439  1.082677
+23                    DONOR_ABORH_Oneg      1.348216  1.339327  1.357165
+24  DONOR_EDU_Currently_in_High_School      0.439951  0.437450  0.442466
+25       DONOR_EDU_Less_than_secondary      0.924516  0.915121  0.934007
+26     DONOR_EDU_Secondary_High_School      1.173869  1.166956  1.180823
+27                   Opp_to_donate_3_6      1.206263  1.194558  1.218083
+28                  Opp_to_donate_7_12      0.829674  0.823755  0.835636
+29                Opp_to_donate_Annual      1.031778  0.973311  1.093757
+30             Opp_to_donate_Bi_Annual      1.041608  0.983620  1.103015
+31                      first_time_hgb      0.280999  0.273830  0.288355
+                             Covariate  Hazard Ratio     Lower     Upper
+0                DONOR_AGE_AT_DONATION      1.015917  1.015780  1.016053
+1                           first_time      0.380381  0.377023  0.383768
+2               cum_lifetime_donations      1.005512  0.999276  1.011787
+3              rbc_loss_last_12_months      1.048733  0.999373  1.100531
+4              rbc_loss_last_24_months      1.037978  1.008301  1.068528
+5                         DONOR_WEIGHT      1.001617  1.001579  1.001655
+6                         DONOR_HEIGHT      1.008897  1.008775  1.009018
+7                     DONOR_BORN_IN_US      1.515533  1.506434  1.524687
+8                       DONOR_GENDER_F      0.923686  0.919902  0.927486
+9                 RACE_ETHNICITY_Asian      0.877212  0.864899  0.889700
+10                RACE_ETHNICITY_Black      0.804607  0.790685  0.818774
+11             RACE_ETHNICITY_Hispanic      0.811801  0.806062  0.817581
+12          RACE_ETHNICITY_Mixed_Other      0.887521  0.865919  0.909663
+13      RACE_ETHNICITY_Native_American      0.923247  0.894121  0.953321
+14                OUTCOME_TYPE_No_Draw      0.480554  0.474885  0.486291
+15                OUTCOME_TYPE_low_hgb      0.767061  0.760095  0.774092
+16         OUTCOME_TYPE_other_deferral      0.532414  0.526501  0.538394
+17                   DONOR_ABORH_ABneg      0.800947  0.772825  0.830092
+18                   DONOR_ABORH_ABpos      0.809510  0.797053  0.822162
+19                    DONOR_ABORH_Aneg      1.036896  1.027833  1.046039
+20                    DONOR_ABORH_Apos      1.002292  0.997744  1.006861
+21                    DONOR_ABORH_Bneg      1.044118  1.027764  1.060732
+22                    DONOR_ABORH_Bpos      0.975839  0.968648  0.983083
+23                    DONOR_ABORH_Oneg      1.150411  1.143048  1.157823
+24  DONOR_EDU_Currently_in_High_School      0.421152  0.412411  0.430078
+25       DONOR_EDU_Less_than_secondary      0.664300  0.653363  0.675420
+26     DONOR_EDU_Secondary_High_School      1.022658  1.015411  1.029956
+27                      first_time_hgb      0.216260  0.203016  0.230368
+                             Covariate  Hazard Ratio     Lower     Upper
+0                DONOR_AGE_AT_DONATION      1.023020  1.022873  1.023167
+1                           first_time      0.319721  0.317291  0.322170
+2               cum_lifetime_donations      1.002800  0.993780  1.011902
+3              rbc_loss_last_12_months      1.074124  1.012051  1.140005
+4              rbc_loss_last_24_months      1.038848  1.001607  1.077475
+5                         DONOR_WEIGHT      1.002377  1.002335  1.002420
+6                         DONOR_HEIGHT      1.009934  1.009805  1.010064
+7                     DONOR_BORN_IN_US      1.519215  1.508605  1.529900
+8                       DONOR_GENDER_F      1.054209  1.048743  1.059705
+9                 RACE_ETHNICITY_Asian      0.748827  0.734809  0.763112
+10                RACE_ETHNICITY_Black      0.477588  0.467436  0.487961
+11             RACE_ETHNICITY_Hispanic      0.657383  0.651790  0.663023
+12          RACE_ETHNICITY_Mixed_Other      0.763352  0.738430  0.789115
+13      RACE_ETHNICITY_Native_American      0.831163  0.805453  0.857695
+14                OUTCOME_TYPE_No_Draw      0.436276  0.429015  0.443661
+15                OUTCOME_TYPE_low_hgb      0.722886  0.713765  0.732122
+16         OUTCOME_TYPE_other_deferral      0.452145  0.446380  0.457984
+17                   DONOR_ABORH_ABneg      0.931377  0.896430  0.967686
+18                   DONOR_ABORH_ABpos      0.818673  0.804424  0.833176
+19                    DONOR_ABORH_Aneg      1.126326  1.114309  1.138473
+20                    DONOR_ABORH_Apos      1.167181  1.161021  1.173374
+21                    DONOR_ABORH_Bneg      1.087012  1.064677  1.109814
+22                    DONOR_ABORH_Bpos      1.051325  1.042370  1.060357
+23                    DONOR_ABORH_Oneg      1.239136  1.228209  1.250161
+24  DONOR_EDU_Currently_in_High_School      0.367722  0.363608  0.371883
+25       DONOR_EDU_Less_than_secondary      0.898752  0.886233  0.911448
+26     DONOR_EDU_Secondary_High_School      1.081309  1.072656  1.090033
+27                   Opp_to_donate_3_6      0.963688  0.947500  0.980151
+28                  Opp_to_donate_7_12      0.906970  0.895001  0.919098
+29                Opp_to_donate_Annual      1.028593  0.996491  1.061728
+30             Opp_to_donate_Bi_Annual      0.827463  0.802662  0.853030
+31                      first_time_hgb      0.161549  0.154062  0.169399
+<lifelines.CoxPHFitter: fitted with 1.09079e+06 total observations, 182496 right-censored observations>
+             duration col = 'time_to_return'
+                event col = 'CENSORED'
+      baseline estimation = breslow
+   number of observations = 1.09079e+06
+number of events observed = 908291
+   partial log-likelihood = -11955198.17
+         time fit was run = 2023-10-27 19:39:28 UTC
+
+---
+                                     coef  exp(coef)   se(coef)   coef lower 95%   coef upper 95%  exp(coef) lower 95%  exp(coef) upper 95%
+covariate                                                                                                                                  
+DONOR_AGE_AT_DONATION                0.01       1.01       0.00             0.01             0.01                 1.01                 1.01
+first_time                          -0.82       0.44       0.01            -0.83            -0.81                 0.43                 0.44
+cum_lifetime_donations               0.01       1.01       0.01             0.00             0.02                 1.00                 1.02
+rbc_loss_last_12_months              0.00       1.00       0.08            -0.15             0.16                 0.86                 1.17
+rbc_loss_last_24_months             -0.02       0.98       0.05            -0.12             0.08                 0.89                 1.08
+DONOR_WEIGHT                         0.00       1.00       0.00            -0.00             0.00                 1.00                 1.00
+DONOR_HEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_BORN_IN_US                     0.32       1.37       0.00             0.31             0.32                 1.36                 1.38
+DONOR_GENDER_F                      -0.01       0.99       0.00            -0.01            -0.00                 0.99                 1.00
+RACE_ETHNICITY_Asian                 0.04       1.04       0.01             0.02             0.05                 1.02                 1.05
+RACE_ETHNICITY_Black                -0.20       0.82       0.01            -0.22            -0.19                 0.80                 0.83
+RACE_ETHNICITY_Hispanic             -0.10       0.90       0.00            -0.11            -0.10                 0.90                 0.91
+RACE_ETHNICITY_Mixed_Other          -0.02       0.98       0.01            -0.04             0.01                 0.96                 1.01
+RACE_ETHNICITY_Native_American      -0.10       0.91       0.01            -0.13            -0.07                 0.88                 0.93
+OUTCOME_TYPE_No_Draw                -0.68       0.51       0.00            -0.69            -0.67                 0.50                 0.51
+OUTCOME_TYPE_low_hgb                -0.15       0.86       0.00            -0.16            -0.14                 0.85                 0.87
+OUTCOME_TYPE_other_deferral         -0.46       0.63       0.01            -0.47            -0.44                 0.62                 0.64
+DONOR_ABORH_ABneg                   -0.17       0.84       0.02            -0.21            -0.13                 0.81                 0.87
+DONOR_ABORH_ABpos                   -0.17       0.85       0.01            -0.18            -0.15                 0.83                 0.86
+DONOR_ABORH_Aneg                     0.00       1.00       0.00            -0.01             0.01                 0.99                 1.01
+DONOR_ABORH_Apos                     0.00       1.00       0.00            -0.00             0.01                 1.00                 1.01
+DONOR_ABORH_Bneg                     0.02       1.02       0.01             0.00             0.03                 1.00                 1.04
+DONOR_ABORH_Bpos                     0.01       1.01       0.00             0.00             0.02                 1.00                 1.02
+DONOR_ABORH_Oneg                     0.04       1.05       0.00             0.04             0.05                 1.04                 1.05
+DONOR_EDU_Currently_in_High_School  -0.36       0.69       0.01            -0.38            -0.35                 0.68                 0.71
+DONOR_EDU_Less_than_secondary       -0.29       0.75       0.01            -0.30            -0.27                 0.74                 0.76
+DONOR_EDU_Secondary_High_School     -0.04       0.96       0.00            -0.05            -0.03                 0.95                 0.97
+first_time_hgb                      -0.21       0.81       0.03            -0.28            -0.15                 0.76                 0.86
+
+                                     cmp to       z      p   -log2(p)
+covariate                                                            
+DONOR_AGE_AT_DONATION                  0.00  167.93 <0.005        inf
+first_time                             0.00 -157.34 <0.005        inf
+cum_lifetime_donations                 0.00    2.46   0.01       6.16
+rbc_loss_last_12_months                0.00    0.03   0.98       0.03
+rbc_loss_last_24_months                0.00   -0.37   0.71       0.49
+DONOR_WEIGHT                           0.00    1.64   0.10       3.30
+DONOR_HEIGHT                           0.00   30.59 <0.005     680.04
+DONOR_BORN_IN_US                       0.00  100.44 <0.005        inf
+DONOR_GENDER_F                         0.00   -3.08 <0.005       8.93
+RACE_ETHNICITY_Asian                   0.00    5.39 <0.005      23.77
+RACE_ETHNICITY_Black                   0.00  -27.32 <0.005     543.40
+RACE_ETHNICITY_Hispanic                0.00  -29.93 <0.005     651.38
+RACE_ETHNICITY_Mixed_Other             0.00   -1.54   0.12       3.03
+RACE_ETHNICITY_Native_American         0.00   -6.84 <0.005      36.83
+OUTCOME_TYPE_No_Draw                   0.00 -157.72 <0.005        inf
+OUTCOME_TYPE_low_hgb                   0.00  -32.61 <0.005     772.50
+OUTCOME_TYPE_other_deferral            0.00  -62.73 <0.005        inf
+DONOR_ABORH_ABneg                      0.00   -9.29 <0.005      65.77
+DONOR_ABORH_ABpos                      0.00  -19.94 <0.005     291.33
+DONOR_ABORH_Aneg                       0.00    0.44   0.66       0.59
+DONOR_ABORH_Apos                       0.00    1.78   0.08       3.73
+DONOR_ABORH_Bneg                       0.00    2.33   0.02       5.64
+DONOR_ABORH_Bpos                       0.00    2.26   0.02       5.41
+DONOR_ABORH_Oneg                       0.00   12.60 <0.005     118.42
+DONOR_EDU_Currently_in_High_School     0.00  -39.13 <0.005        inf
+DONOR_EDU_Less_than_secondary          0.00  -38.25 <0.005        inf
+DONOR_EDU_Secondary_High_School        0.00  -11.88 <0.005     105.75
+first_time_hgb                         0.00   -6.31 <0.005      31.76
+---
+Concordance = 0.62
+Partial AIC = 23910452.35
+log-likelihood ratio test = 169201.08 on 28 df
+-log2(p) of ll-ratio test = inf
+
+<lifelines.CoxPHFitter: fitted with 1.98923e+06 total observations, 820269 right-censored observations>
+             duration col = 'time_to_return'
+                event col = 'CENSORED'
+      baseline estimation = breslow
+   number of observations = 1.98923e+06
+number of events observed = 1.16896e+06
+   partial log-likelihood = -16261456.02
+         time fit was run = 2023-10-27 19:39:56 UTC
+
+---
+                                     coef  exp(coef)   se(coef)   coef lower 95%   coef upper 95%  exp(coef) lower 95%  exp(coef) upper 95%
+covariate                                                                                                                                  
+DONOR_AGE_AT_DONATION                0.01       1.01       0.00             0.01             0.01                 1.01                 1.02
+first_time                          -0.80       0.45       0.00            -0.80            -0.79                 0.45                 0.45
+cum_lifetime_donations              -0.00       1.00       0.01            -0.02             0.01                 0.98                 1.01
+rbc_loss_last_12_months              0.01       1.01       0.07            -0.12             0.15                 0.89                 1.16
+rbc_loss_last_24_months             -0.01       0.99       0.04            -0.10             0.07                 0.91                 1.07
+DONOR_WEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_HEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_BORN_IN_US                     0.38       1.46       0.00             0.37             0.38                 1.45                 1.47
+DONOR_GENDER_F                       0.11       1.12       0.00             0.11             0.11                 1.11                 1.12
+RACE_ETHNICITY_Asian                -0.01       0.99       0.01            -0.02             0.00                 0.98                 1.00
+RACE_ETHNICITY_Black                -0.38       0.69       0.01            -0.39            -0.37                 0.68                 0.69
+RACE_ETHNICITY_Hispanic             -0.20       0.82       0.00            -0.21            -0.20                 0.81                 0.82
+RACE_ETHNICITY_Mixed_Other          -0.13       0.88       0.01            -0.16            -0.11                 0.85                 0.90
+RACE_ETHNICITY_Native_American      -0.19       0.83       0.01            -0.21            -0.17                 0.81                 0.84
+OUTCOME_TYPE_No_Draw                -0.64       0.53       0.00            -0.64            -0.63                 0.52                 0.53
+OUTCOME_TYPE_low_hgb                -0.25       0.78       0.01            -0.26            -0.24                 0.77                 0.79
+OUTCOME_TYPE_other_deferral         -0.60       0.55       0.01            -0.61            -0.59                 0.54                 0.55
+DONOR_ABORH_ABneg                   -0.01       0.99       0.01            -0.04             0.02                 0.96                 1.02
+DONOR_ABORH_ABpos                   -0.07       0.93       0.01            -0.09            -0.06                 0.92                 0.94
+DONOR_ABORH_Aneg                     0.11       1.12       0.00             0.10             0.12                 1.11                 1.13
+DONOR_ABORH_Apos                     0.10       1.11       0.00             0.10             0.10                 1.10                 1.11
+DONOR_ABORH_Bneg                     0.09       1.09       0.01             0.07             0.10                 1.07                 1.11
+DONOR_ABORH_Bpos                     0.08       1.08       0.00             0.07             0.09                 1.08                 1.09
+DONOR_ABORH_Oneg                     0.14       1.15       0.00             0.14             0.15                 1.15                 1.16
+DONOR_EDU_Currently_in_High_School  -0.05       0.95       0.00            -0.06            -0.04                 0.95                 0.96
+DONOR_EDU_Less_than_secondary       -0.11       0.90       0.01            -0.12            -0.10                 0.89                 0.91
+DONOR_EDU_Secondary_High_School     -0.06       0.94       0.00            -0.06            -0.05                 0.94                 0.95
+Opp_to_donate_3_6                    0.48       1.62       0.01             0.47             0.49                 1.61                 1.64
+Opp_to_donate_7_12                   0.15       1.17       0.00             0.15             0.16                 1.16                 1.18
+Opp_to_donate_Annual                -0.01       0.99       0.03            -0.06             0.05                 0.94                 1.05
+Opp_to_donate_Bi_Annual              0.02       1.02       0.03            -0.03             0.08                 0.97                 1.08
+first_time_hgb                      -0.21       0.81       0.01            -0.24            -0.19                 0.78                 0.83
+
+                                     cmp to       z      p   -log2(p)
+covariate                                                            
+DONOR_AGE_AT_DONATION                  0.00  231.15 <0.005        inf
+first_time                             0.00 -300.90 <0.005        inf
+cum_lifetime_donations                 0.00   -0.56   0.58       0.79
+rbc_loss_last_12_months                0.00    0.21   0.83       0.26
+rbc_loss_last_24_months                0.00   -0.32   0.75       0.42
+DONOR_WEIGHT                           0.00   29.59 <0.005     636.84
+DONOR_HEIGHT                           0.00   18.92 <0.005     262.77
+DONOR_BORN_IN_US                       0.00  138.68 <0.005        inf
+DONOR_GENDER_F                         0.00   55.65 <0.005        inf
+RACE_ETHNICITY_Asian                   0.00   -1.38   0.17       2.58
+RACE_ETHNICITY_Black                   0.00  -65.82 <0.005        inf
+RACE_ETHNICITY_Hispanic                0.00  -70.62 <0.005        inf
+RACE_ETHNICITY_Mixed_Other             0.00  -10.90 <0.005      89.49
+RACE_ETHNICITY_Native_American         0.00  -18.10 <0.005     240.84
+OUTCOME_TYPE_No_Draw                   0.00 -165.02 <0.005        inf
+OUTCOME_TYPE_low_hgb                   0.00  -49.05 <0.005        inf
+OUTCOME_TYPE_other_deferral            0.00  -94.65 <0.005        inf
+DONOR_ABORH_ABneg                      0.00   -0.78   0.44       1.19
+DONOR_ABORH_ABpos                      0.00  -12.02 <0.005     108.07
+DONOR_ABORH_Aneg                       0.00   27.42 <0.005     547.42
+DONOR_ABORH_Apos                       0.00   45.22 <0.005        inf
+DONOR_ABORH_Bneg                       0.00   11.24 <0.005      95.00
+DONOR_ABORH_Bpos                       0.00   24.25 <0.005     429.26
+DONOR_ABORH_Oneg                       0.00   39.86 <0.005        inf
+DONOR_EDU_Currently_in_High_School     0.00  -13.81 <0.005     141.70
+DONOR_EDU_Less_than_secondary          0.00  -20.00 <0.005     293.28
+DONOR_EDU_Secondary_High_School        0.00  -18.82 <0.005     260.01
+Opp_to_donate_3_6                      0.00   89.08 <0.005        inf
+Opp_to_donate_7_12                     0.00   37.96 <0.005        inf
+Opp_to_donate_Annual                   0.00   -0.18   0.85       0.23
+Opp_to_donate_Bi_Annual                0.00    0.80   0.43       1.23
+first_time_hgb                         0.00  -14.81 <0.005     162.40
+---
+Concordance = 0.68
+Partial AIC = 32522976.04
+log-likelihood ratio test = 468339.87 on 32 df
+-log2(p) of ll-ratio test = inf
+
+<lifelines.CoxPHFitter: fitted with 1.28711e+06 total observations, 373530 right-censored observations>
+             duration col = 'time_to_return'
+                event col = 'CENSORED'
+      baseline estimation = breslow
+   number of observations = 1.28711e+06
+number of events observed = 913579
+   partial log-likelihood = -12236400.69
+         time fit was run = 2023-10-27 19:40:42 UTC
+
+---
+                                     coef  exp(coef)   se(coef)   coef lower 95%   coef upper 95%  exp(coef) lower 95%  exp(coef) upper 95%
+covariate                                                                                                                                  
+DONOR_AGE_AT_DONATION                0.01       1.01       0.00             0.01             0.01                 1.01                 1.01
+first_time                          -0.82       0.44       0.00            -0.83            -0.81                 0.44                 0.45
+cum_lifetime_donations               0.00       1.00       0.00            -0.01             0.01                 0.99                 1.01
+rbc_loss_last_12_months             -0.14       0.87       0.09            -0.32             0.04                 0.72                 1.04
+rbc_loss_last_24_months              0.10       1.10       0.06            -0.02             0.21                 0.98                 1.23
+DONOR_WEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_HEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_BORN_IN_US                     0.24       1.28       0.00             0.24             0.25                 1.27                 1.29
+DONOR_GENDER_F                       0.02       1.02       0.00             0.02             0.03                 1.02                 1.03
+RACE_ETHNICITY_Asian                 0.09       1.10       0.01             0.08             0.11                 1.08                 1.12
+RACE_ETHNICITY_Black                -0.15       0.86       0.01            -0.17            -0.13                 0.84                 0.87
+RACE_ETHNICITY_Hispanic             -0.10       0.90       0.00            -0.11            -0.09                 0.90                 0.91
+RACE_ETHNICITY_Mixed_Other           0.00       1.00       0.01            -0.02             0.03                 0.98                 1.03
+RACE_ETHNICITY_Native_American      -0.09       0.91       0.02            -0.12            -0.06                 0.89                 0.94
+OUTCOME_TYPE_No_Draw                -0.64       0.53       0.01            -0.65            -0.63                 0.52                 0.53
+OUTCOME_TYPE_low_hgb                -0.38       0.68       0.00            -0.39            -0.37                 0.68                 0.69
+OUTCOME_TYPE_other_deferral         -0.61       0.54       0.01            -0.63            -0.60                 0.54                 0.55
+DONOR_ABORH_ABneg                   -0.24       0.78       0.02            -0.28            -0.21                 0.76                 0.81
+DONOR_ABORH_ABpos                   -0.20       0.82       0.01            -0.21            -0.18                 0.81                 0.83
+DONOR_ABORH_Aneg                    -0.04       0.96       0.00            -0.05            -0.03                 0.95                 0.97
+DONOR_ABORH_Apos                    -0.03       0.97       0.00            -0.04            -0.03                 0.96                 0.97
+DONOR_ABORH_Bneg                    -0.02       0.98       0.01            -0.03             0.00                 0.97                 1.00
+DONOR_ABORH_Bpos                    -0.03       0.97       0.00            -0.04            -0.03                 0.96                 0.97
+DONOR_ABORH_Oneg                     0.04       1.04       0.00             0.03             0.05                 1.04                 1.05
+DONOR_EDU_Currently_in_High_School  -0.25       0.78       0.01            -0.27            -0.22                 0.77                 0.80
+DONOR_EDU_Less_than_secondary       -0.27       0.76       0.01            -0.29            -0.25                 0.75                 0.78
+DONOR_EDU_Secondary_High_School     -0.00       1.00       0.00            -0.01             0.00                 0.99                 1.00
+first_time_hgb                      -0.20       0.82       0.03            -0.26            -0.13                 0.77                 0.88
+
+                                     cmp to       z      p   -log2(p)
+covariate                                                            
+DONOR_AGE_AT_DONATION                  0.00  168.91 <0.005        inf
+first_time                             0.00 -177.12 <0.005        inf
+cum_lifetime_donations                 0.00    0.39   0.69       0.53
+rbc_loss_last_12_months                0.00   -1.51   0.13       2.93
+rbc_loss_last_24_months                0.00    1.67   0.09       3.40
+DONOR_WEIGHT                           0.00    8.39 <0.005      54.23
+DONOR_HEIGHT                           0.00   55.73 <0.005        inf
+DONOR_BORN_IN_US                       0.00   70.40 <0.005        inf
+DONOR_GENDER_F                         0.00    8.88 <0.005      60.35
+RACE_ETHNICITY_Asian                   0.00   12.84 <0.005     122.86
+RACE_ETHNICITY_Black                   0.00  -16.98 <0.005     212.39
+RACE_ETHNICITY_Hispanic                0.00  -27.30 <0.005     542.57
+RACE_ETHNICITY_Mixed_Other             0.00    0.11   0.91       0.13
+RACE_ETHNICITY_Native_American         0.00   -5.44 <0.005      24.17
+OUTCOME_TYPE_No_Draw                   0.00 -103.21 <0.005        inf
+OUTCOME_TYPE_low_hgb                   0.00  -80.00 <0.005        inf
+OUTCOME_TYPE_other_deferral            0.00 -107.40 <0.005        inf
+DONOR_ABORH_ABneg                      0.00  -13.37 <0.005     133.10
+DONOR_ABORH_ABpos                      0.00  -24.78 <0.005     447.80
+DONOR_ABORH_Aneg                       0.00   -8.27 <0.005      52.79
+DONOR_ABORH_Apos                       0.00  -13.68 <0.005     139.01
+DONOR_ABORH_Bneg                       0.00   -1.88   0.06       4.07
+DONOR_ABORH_Bpos                       0.00   -8.41 <0.005      54.41
+DONOR_ABORH_Oneg                       0.00   11.96 <0.005     107.06
+DONOR_EDU_Currently_in_High_School     0.00  -22.19 <0.005     360.02
+DONOR_EDU_Less_than_secondary          0.00  -31.37 <0.005     715.02
+DONOR_EDU_Secondary_High_School        0.00   -0.88   0.38       1.41
+first_time_hgb                         0.00   -5.96 <0.005      28.55
+---
+Concordance = 0.61
+Partial AIC = 24472857.38
+log-likelihood ratio test = 160053.63 on 28 df
+-log2(p) of ll-ratio test = inf
+
+<lifelines.CoxPHFitter: fitted with 1.15393e+06 total observations, 545851 right-censored observations>
+             duration col = 'time_to_return'
+                event col = 'CENSORED'
+      baseline estimation = breslow
+   number of observations = 1.15393e+06
+number of events observed = 608082
+   partial log-likelihood = -8081810.07
+         time fit was run = 2023-10-27 19:41:12 UTC
+
+---
+                                     coef  exp(coef)   se(coef)   coef lower 95%   coef upper 95%  exp(coef) lower 95%  exp(coef) upper 95%
+covariate                                                                                                                                  
+DONOR_AGE_AT_DONATION                0.02       1.02       0.00             0.02             0.02                 1.02                 1.02
+first_time                          -0.84       0.43       0.00            -0.85            -0.83                 0.43                 0.44
+cum_lifetime_donations              -0.01       0.99       0.01            -0.02             0.00                 0.98                 1.00
+rbc_loss_last_12_months              0.09       1.09       0.13            -0.16             0.34                 0.85                 1.40
+rbc_loss_last_24_months             -0.04       0.96       0.08            -0.20             0.12                 0.82                 1.13
+DONOR_WEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_HEIGHT                         0.00       1.00       0.00             0.00             0.00                 1.00                 1.00
+DONOR_BORN_IN_US                     0.28       1.32       0.00             0.27             0.29                 1.31                 1.33
+DONOR_GENDER_F                       0.16       1.17       0.00             0.15             0.16                 1.16                 1.18
+RACE_ETHNICITY_Asian                 0.01       1.01       0.01            -0.01             0.03                 0.99                 1.03
+RACE_ETHNICITY_Black                -0.45       0.64       0.01            -0.47            -0.43                 0.62                 0.65
+RACE_ETHNICITY_Hispanic             -0.21       0.81       0.00            -0.22            -0.20                 0.81                 0.82
+RACE_ETHNICITY_Mixed_Other          -0.08       0.92       0.02            -0.12            -0.05                 0.89                 0.95
+RACE_ETHNICITY_Native_American      -0.15       0.86       0.02            -0.18            -0.12                 0.83                 0.89
+OUTCOME_TYPE_No_Draw                -0.60       0.55       0.01            -0.61            -0.58                 0.54                 0.56
+OUTCOME_TYPE_low_hgb                -0.35       0.70       0.01            -0.36            -0.34                 0.70                 0.71
+OUTCOME_TYPE_other_deferral         -0.65       0.52       0.01            -0.66            -0.64                 0.52                 0.53
+DONOR_ABORH_ABneg                   -0.11       0.89       0.02            -0.15            -0.07                 0.86                 0.93
+DONOR_ABORH_ABpos                   -0.15       0.86       0.01            -0.17            -0.13                 0.85                 0.88
+DONOR_ABORH_Aneg                     0.02       1.02       0.01             0.01             0.03                 1.01                 1.03
+DONOR_ABORH_Apos                     0.07       1.07       0.00             0.06             0.08                 1.07                 1.08
+DONOR_ABORH_Bneg                     0.00       1.00       0.01            -0.02             0.03                 0.98                 1.03
+DONOR_ABORH_Bpos                     0.06       1.06       0.00             0.05             0.07                 1.05                 1.07
+DONOR_ABORH_Oneg                     0.08       1.09       0.00             0.07             0.09                 1.08                 1.10
+DONOR_EDU_Currently_in_High_School  -0.03       0.97       0.01            -0.04            -0.01                 0.96                 0.99
+DONOR_EDU_Less_than_secondary       -0.01       0.99       0.01            -0.02             0.01                 0.98                 1.01
+DONOR_EDU_Secondary_High_School     -0.05       0.96       0.00            -0.05            -0.04                 0.95                 0.96
+Opp_to_donate_3_6                    0.17       1.18       0.01             0.15             0.19                 1.16                 1.20
+Opp_to_donate_7_12                   0.06       1.06       0.01             0.04             0.07                 1.04                 1.07
+Opp_to_donate_Annual                 0.24       1.27       0.02             0.20             0.27                 1.23                 1.31
+Opp_to_donate_Bi_Annual              0.20       1.22       0.02             0.17             0.23                 1.18                 1.26
+first_time_hgb                      -0.44       0.64       0.03            -0.49            -0.39                 0.61                 0.68
+
+                                     cmp to       z      p   -log2(p)
+covariate                                                            
+DONOR_AGE_AT_DONATION                  0.00  184.27 <0.005        inf
+first_time                             0.00 -204.73 <0.005        inf
+cum_lifetime_donations                 0.00   -1.44   0.15       2.74
+rbc_loss_last_12_months                0.00    0.69   0.49       1.04
+rbc_loss_last_24_months                0.00   -0.45   0.66       0.61
+DONOR_WEIGHT                           0.00   10.05 <0.005      76.60
+DONOR_HEIGHT                           0.00   41.91 <0.005        inf
+DONOR_BORN_IN_US                       0.00   66.74 <0.005        inf
+DONOR_GENDER_F                         0.00   55.35 <0.005        inf
+RACE_ETHNICITY_Asian                   0.00    1.32   0.19       2.42
+RACE_ETHNICITY_Black                   0.00  -40.65 <0.005        inf
+RACE_ETHNICITY_Hispanic                0.00  -45.97 <0.005        inf
+RACE_ETHNICITY_Mixed_Other             0.00   -4.92 <0.005      20.16
+RACE_ETHNICITY_Native_American         0.00   -9.39 <0.005      67.16
+OUTCOME_TYPE_No_Draw                   0.00  -68.19 <0.005        inf
+OUTCOME_TYPE_low_hgb                   0.00  -51.67 <0.005        inf
+OUTCOME_TYPE_other_deferral            0.00  -98.48 <0.005        inf
+DONOR_ABORH_ABneg                      0.00   -5.70 <0.005      26.30
+DONOR_ABORH_ABpos                      0.00  -16.42 <0.005     198.84
+DONOR_ABORH_Aneg                       0.00    3.62 <0.005      11.75
+DONOR_ABORH_Apos                       0.00   23.07 <0.005     388.90
+DONOR_ABORH_Bneg                       0.00    0.40   0.69       0.54
+DONOR_ABORH_Bpos                       0.00   12.31 <0.005     113.30
+DONOR_ABORH_Oneg                       0.00   17.00 <0.005     212.80
+DONOR_EDU_Currently_in_High_School     0.00   -4.12 <0.005      14.71
+DONOR_EDU_Less_than_secondary          0.00   -0.73   0.47       1.10
+DONOR_EDU_Secondary_High_School        0.00  -11.03 <0.005      91.53
+Opp_to_donate_3_6                      0.00   18.94 <0.005     263.22
+Opp_to_donate_7_12                     0.00    8.08 <0.005      50.46
+Opp_to_donate_Annual                   0.00   14.49 <0.005     155.62
+Opp_to_donate_Bi_Annual                0.00   12.56 <0.005     117.75
+first_time_hgb                         0.00  -17.15 <0.005     216.52
+---
+Concordance = 0.67
+Partial AIC = 16163684.13
+log-likelihood ratio test = 213045.26 on 32 df
+-log2(p) of ll-ratio test = inf
