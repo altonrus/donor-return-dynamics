@@ -37,7 +37,7 @@ intra_fixed= intra.query("Fixed_mobile== 1")
 intra_mobile= intra.query("Fixed_mobile == 0")
 
 ref_fix=['OUTCOME_TYPE_completed', 'race_White', 'ABO_RH_Opos', 'sex_M']
-ref_mob=['OUTCOME_TYPE_completed', 'race_White', 'ABO_RH_Opos', 'sex_M', 'Opp_to_donate_12_more']
+ref_mob=['OUTCOME_TYPE_completed', 'race_White', 'ABO_RH_Opos', 'sex_M', 'Opp_to_donate_Annual_1']
 
 #pre COVID
 Xpre_fix= pre_fixed.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH']]

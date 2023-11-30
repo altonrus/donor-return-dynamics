@@ -37,7 +37,7 @@ intra_fixed= intra.query("Fixed_mobile== 1")
 intra_mobile= intra.query("Fixed_mobile == 0")
 
 ref_fix=['OUTCOME_TYPE_completed', 'RACE_ETHNICITY_White', 'DONOR_GENDER_M','DONOR_ABORH_Opos', 'DONOR_EDU_Post_Secondary']
-ref_mob=['OUTCOME_TYPE_completed', 'RACE_ETHNICITY_White', 'DONOR_GENDER_M', 'DONOR_ABORH_Opos', 'DONOR_EDU_Post_Secondary', 'Opp_to_donate_12_more']
+ref_mob=['OUTCOME_TYPE_completed', 'RACE_ETHNICITY_White', 'DONOR_GENDER_M', 'DONOR_ABORH_Opos', 'DONOR_EDU_Post_Secondary', 'Opp_to_donate_Annual']
 
 
 #pre COVID
