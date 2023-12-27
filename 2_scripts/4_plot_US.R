@@ -29,20 +29,27 @@ t_dat2$group<- ifelse(grepl("After", t_dat2$covariate), "Donation Outcomes", NA)
 t_dat2$group<- ifelse(grepl("Drives", t_dat2$covariate), "Mobile Drives", t_dat2$group)
 t_dat2$group[is.na(t_dat2$group)] <- "Donor Characteristics"
 
+t_dat2$sig <- ifelse((t_dat2$`exp(coef)lower` <= 1 & t_dat2$`exp(coef)upper` >= 1), FALSE, TRUE)
+
 #create diff datasets for diff groups
 
 d1<- subset(t_dat2, group=='Donor Characteristics')
 d2<- subset(t_dat2, group=='Donation Outcomes')
 d3<- subset(t_dat2, group=='Mobile Drives')
 
+
 #d1
-mean_hr <- d1[`exp(coef)` != 0] %>%
-  group_by(covariate) %>%
-  summarize(mean_hr = mean(`exp(coef)`))
-# Reorder the levels of the covariate factor based on the mean HR
-d1$covariate <- factor(d1$covariate, levels = mean_hr$covariate[order(mean_hr$mean_hr)])
+d1$cov_group<- ifelse(grepl("vs O+", d1$covariate), "Blood type", NA)
+d1$cov_group<- ifelse(grepl("vs White", d1$covariate), "race", d1$cov_group)
+d1$cov_group<- ifelse(grepl("vs Post", d1$covariate), "Edu", d1$cov_group)
+d1$cov_group[is.na(d1$cov_group)] <- "Other"
 
-
+d1 <- d1 %>%
+  group_by(covariate, cov_group) %>%
+  mutate(mean_hr = mean(`exp(coef)`)) %>%
+  ungroup() %>%
+  arrange(cov_group, mean_hr) %>%
+  mutate(covariate = factor(covariate, levels = unique(covariate)))
 
 #d2
 mean_hr <- d2[`exp(coef)` != 0] %>%
@@ -56,25 +63,27 @@ mean_hr <- d3[`exp(coef)` != 0] %>%
   summarize(mean_hr = mean(`exp(coef)`))
 d3$covariate <- factor(d3$covariate, levels = mean_hr$covariate[order(mean_hr$mean_hr)])
 
+d1<- subset(d1, Adjusted=='Adjusted')
+d2<- subset(d2, Adjusted=='Adjusted')
+d3<- subset(d3, Adjusted=='Adjusted')
+
 
 g1<-ggplot(data = d1, 
            aes(x = `exp(coef)`, xmin = `exp(coef)lower`, xmax = `exp(coef)upper`, 
-               y = covariate, shape=`Adjusted`))+
+               y = covariate, shape=`Adjusted`, alpha=sig))+
   facet_grid(cols = vars(Fixed, factor(Time, levels=c('Pre-COVID19', 'Intra-COVID19'))))+
   geom_pointrange(size=1)+
   scale_shape_manual(values=c( 16, 1))+
   geom_vline(xintercept = 1, linetype = "dashed")+
   theme_bw()+
-  #scale_alpha_discrete(range = c(0.4, 1), guide = 'none') +
+  scale_alpha_discrete(range = c(0.4, 1), guide = 'none') +
   labs(y="", x="")+
   theme(legend.position = "none", legend.title=element_blank(),strip.text = element_text(
-    size = 16), axis.text.y = element_text(size = 16, color = "black"), 
-    plot.title = element_text(size = 16, face = "bold", hjust = 0),
-    axis.text.x = element_text(size = 10, color = "black"))+
-  #scale_y_discrete(labels = function(y) str_wrap(y, width = 30))+
-  coord_cartesian(xlim = c(0.35, 1.7))+
+    size = 16), axis.text.y = element_text(size = 14, color = "black"), 
+    plot.title = element_text(size = 15, face = "bold", hjust = 0),
+    axis.text.x = element_text(size = 12, color = "black"))+
+  coord_cartesian(xlim = c(0.35, 1.4))+
   ggtitle("Donor Characteristics")
-
 
 g2<-ggplot(data = d2, 
            aes(x = `exp(coef)`, xmin = `exp(coef)lower`, xmax = `exp(coef)upper`, 
@@ -87,36 +96,36 @@ g2<-ggplot(data = d2,
   #scale_alpha_discrete(range = c(0.4, 1), guide = 'none') +
   labs(y="", x="")+
   theme(legend.position = "none", legend.title=element_blank(),strip.text = element_blank(), 
-        axis.text.y = element_text(size = 16, color = "black"), 
-        axis.text.x = element_text(size = 10, color = "black"),
-        plot.title = element_text(size = 16, face = "bold", hjust = 0))+
-  coord_cartesian(xlim = c(0.35, 1.7))+
+        axis.text.y = element_text(size = 14, color = "black"), 
+        axis.text.x = element_text(size = 12, color = "black"),
+        plot.title = element_text(size = 15, face = "bold", hjust = 0))+
+  coord_cartesian(xlim = c(0.35, 1.4))+
   ggtitle("Donation Outcomes")
 
 g3<-ggplot(data = d3, 
            aes(x = `exp(coef)`, xmin = `exp(coef)lower`, xmax = `exp(coef)upper`, 
-               y = covariate, shape=`Adjusted`))+
+               y = covariate, shape=`Adjusted`, alpha=sig))+
   facet_grid(cols = vars(Fixed, factor(Time, levels=c('Pre-COVID19', 'Intra-COVID19'))))+
   geom_pointrange(size=1)+
   scale_shape_manual(values=c( 16, 1))+
   geom_vline(xintercept = 1, linetype = "dashed")+
   theme_bw()+
-  #scale_alpha_discrete(range = c(0.4, 1), guide = 'none') +
+  scale_alpha_discrete(range = c(0.4, 1), guide = 'none') +
   labs(y="", x="")+
-  theme(legend.position = "bottom", legend.title=element_blank(), legend.text = element_text(size = 18, color = "black"),
-        strip.text = element_blank(), axis.text.y = element_text(size = 16, color = "black"),
-        axis.text.x = element_text(size = 10, color = "black"),
-        plot.title = element_text(size = 16, face = "bold", hjust = 0))+
-  coord_cartesian(xlim = c(0.35, 1.7))+
+  theme(legend.position = "none",
+        strip.text = element_blank(), axis.text.y = element_text(size = 14, color = "black"),
+        axis.text.x = element_text(size = 12, color = "black"),
+        plot.title = element_text(size = 15, face = "bold", hjust = 0))+
+  coord_cartesian(xlim = c(0.7, 1.8))+
   ggtitle("Mobile Drives")
 
-
-grid_plot<-plot_grid( g1, g2, g3, ncol=1, rel_heights= c(0.9, 0.18, 0.25), 
-                      scale = c(0.955, .96, .96), align='v')
+grid_plot<-plot_grid( g1, g2, g3, ncol=1, rel_heights= c(0.94, 0.20, 0.23), 
+                      scale = c(0.96, .965, .965), align='v')
 
 grid_plot + theme(panel.background = element_blank())
 
 ggsave("../4_figures/US_COX.png",
-       width = 18,
-       height = 14,
+       width = 16,
+       height = 12,
        unit="in", bg='#ffffff')
+

@@ -1,3 +1,5 @@
+#run cox models for Vitalant
+
 import pandas as pd
 import numpy as np
 import datetime as dt
@@ -36,14 +38,15 @@ pre_mobile= pre.query("Fixed_mobile == 0")
 intra_fixed= intra.query("Fixed_mobile== 1")
 intra_mobile= intra.query("Fixed_mobile == 0")
 
+#define reference categories
+
 ref_fix=['OUTCOME_TYPE_completed', 'RACE_ETHNICITY_White', 'DONOR_GENDER_M','DONOR_ABORH_Opos', 'DONOR_EDU_Post_Secondary']
 ref_mob=['OUTCOME_TYPE_completed', 'RACE_ETHNICITY_White', 'DONOR_GENDER_M', 'DONOR_ABORH_Opos', 'DONOR_EDU_Post_Secondary', 'Opp_to_donate_Annual']
 
 
 #pre COVID
-Xpre_fix= pre_fixed.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU']]
+Xpre_fix= pre_fixed.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU']]
                         
-#['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_ABORH', 'DONOR_BORN_IN_US', 'DONOR_EDU', 'DONOR_WEIGHT', 'DONOR_HEIGHT']]
 
 Xpre_fix= pd.get_dummies(Xpre_fix)  
 Xpre_fix = Xpre_fix.drop(ref_fix, axis=1)  
@@ -52,7 +55,7 @@ Xpre_fix['first_time_hgb']=Xpre_fix["first_time"]*Xpre_fix['OUTCOME_TYPE_low hgb
 Xpre_fix.fillna(0, inplace=True)
 ypre_fix= Xpre_fix[['time_to_return']]
 
-Xpre_mob= pre_mobile.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU', 'Opp_to_donate']]
+Xpre_mob= pre_mobile.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU', 'Opp_to_donate']]
 
 Xpre_mob= pd.get_dummies(Xpre_mob)  
 Xpre_mob = Xpre_mob.drop(ref_mob, axis=1)  
@@ -67,7 +70,7 @@ Xpre_mob.columns = Xpre_mob.columns.str.replace(' ', '_')
 
 #intra covid
 
-Xintra_fix= intra_fixed.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU']]
+Xintra_fix= intra_fixed.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU']]
 
 Xintra_fix= pd.get_dummies(Xintra_fix)  
 Xintra_fix = Xintra_fix.drop(ref_fix, axis=1)  
@@ -77,7 +80,7 @@ Xintra_fix['first_time_hgb']=Xintra_fix["first_time"]*Xintra_fix['OUTCOME_TYPE_l
 Xintra_fix.fillna(0, inplace=True)
 yintra_fix= Xintra_fix[[ 'time_to_return']]
 
-Xintra_mob= intra_mobile.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU', 'Opp_to_donate']]
+Xintra_mob= intra_mobile.loc[:,['time_to_return','CENSORED','DONOR_AGE_AT_DONATION', 'first_time','DONOR_GENDER', 'RACE_ETHNICITY',  'OUTCOME_TYPE', 'DONOR_ABORH', 'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'DONOR_WEIGHT', 'DONOR_HEIGHT', 'DONOR_BORN_IN_US', 'DONOR_EDU', 'Opp_to_donate']]
 
 
 Xintra_mob= pd.get_dummies(Xintra_mob)  
@@ -97,7 +100,7 @@ Xintra_fix.drop(['RACE_ETHNICITY_UNKNOWN', 'DONOR_ABORH_UNK', 'DONOR_EDU_UNAVAIL
 Xpre_mob.drop(['RACE_ETHNICITY_UNKNOWN', 'DONOR_ABORH_UNK', 'DONOR_EDU_UNAVAILABLE','DONOR_GENDER_UNKNOWN'], axis=1, inplace=True)
 Xintra_mob.drop(['RACE_ETHNICITY_UNKNOWN', 'DONOR_ABORH_UNK', 'DONOR_EDU_UNAVAILABLE'], axis=1, inplace=True)
 
-"""
+
 #univariate regression
 
 #pre-fixed
@@ -228,7 +231,8 @@ print(best_params)
 # Print the summary of the best model
 print("\nBest Model Summary:")
 print(best_model.lifelines_model.print_summary())
-"""
+
+#main models
 cph = CoxPHFitter()
 cph.fit(Xpre_fix, 'time_to_return', 'CENSORED')
 cph.print_summary()

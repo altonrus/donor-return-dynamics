@@ -1,3 +1,5 @@
+#cox models for SANBS
+
 import pandas as pd
 import numpy as np
 import datetime as dt
@@ -40,7 +42,7 @@ ref_fix=['OUTCOME_TYPE_completed', 'race_White', 'ABO_RH_Opos', 'sex_M']
 ref_mob=['OUTCOME_TYPE_completed', 'race_White', 'ABO_RH_Opos', 'sex_M', 'Opp_to_donate_Annual_1']
 
 #pre COVID
-Xpre_fix= pre_fixed.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH']]
+Xpre_fix= pre_fixed.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH']]
 
 Xpre_fix= pd.get_dummies(Xpre_fix)  
 Xpre_fix = Xpre_fix.drop(ref_fix, axis=1)  
@@ -49,7 +51,7 @@ Xpre_fix['first_time_hgb']=Xpre_fix["first_time"]*Xpre_fix['OUTCOME_TYPE_low hgb
 Xpre_fix.fillna(0, inplace=True)
 ypre_fix= Xpre_fix[['time_to_return']]
 
-Xpre_mob= pre_mobile.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH', 'Opp_to_donate']]
+Xpre_mob= pre_mobile.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH', 'Opp_to_donate']]
 
 Xpre_mob= pd.get_dummies(Xpre_mob)  
 Xpre_mob = Xpre_mob.drop(ref_mob, axis=1)  
@@ -62,7 +64,7 @@ Xpre_fix.columns = Xpre_fix.columns.str.replace(' ', '_')
 Xpre_mob.columns = Xpre_mob.columns.str.replace(' ', '_')
 #intra covid
 
-Xintra_fix= intra_fixed.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH']]
+Xintra_fix= intra_fixed.loc[:,['time_to_return','CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH']]
 
 Xintra_fix= pd.get_dummies(Xintra_fix)  
 Xintra_fix = Xintra_fix.drop(ref_fix, axis=1)  
@@ -72,7 +74,7 @@ Xintra_fix['first_time_hgb']=Xintra_fix["first_time"]*Xintra_fix['OUTCOME_TYPE_l
 Xintra_fix.fillna(0, inplace=True)
 yintra_fix= Xintra_fix[[ 'time_to_return']]
 
-Xintra_mob= intra_mobile.loc[:,['time_to_return', 'CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE', 'cum_lifetime_donations',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH', 'Opp_to_donate']]
+Xintra_mob= intra_mobile.loc[:,['time_to_return', 'CENSORED','Visit_Age', 'first_time'  ,'sex', 'race', 'OUTCOME_TYPE',  'rbc_loss_last_12_months', 'rbc_loss_last_24_months', 'high_school_age', 'ABO_RH', 'Opp_to_donate']]
 
 
 Xintra_mob= pd.get_dummies(Xintra_mob)  
@@ -90,7 +92,7 @@ Xpre_fix.drop(['race_unknown', 'ABO_RH_UNK'], axis=1, inplace=True)
 Xintra_fix.drop(['race_unknown', 'ABO_RH_UNK'], axis=1, inplace=True)
 Xpre_mob.drop(['race_unknown', 'ABO_RH_UNK'], axis=1, inplace=True)
 Xintra_mob.drop(['race_unknown', 'ABO_RH_UNK'], axis=1, inplace=True)
-"""
+
 #univariate regression
 
 #pre-fixed
@@ -150,11 +152,14 @@ for covariate in covariates:
     results_intra_mob = results_intra_mob.append({'Covariate': covariate, 'Hazard Ratio': hazard_ratio, 'Lower': lower, 'Upper': upper}, ignore_index=True)
     
 print(results_intra_mob)
+
+
+#plot main models
 Xpre_fix.drop(['time_to_return'], axis=1, inplace=True)
 Xintra_fix.drop(['time_to_return'], axis=1, inplace=True)
 Xpre_mob.drop(['time_to_return'], axis=1, inplace=True)
 Xintra_mob.drop(['time_to_return'], axis=1, inplace=True)
-"""
+
 cph = CoxPHFitter()
 cph.fit(Xpre_fix, 'time_to_return', 'CENSORED')
 cph.print_summary()
@@ -171,70 +176,3 @@ cph = CoxPHFitter()
 cph.fit(Xintra_mob, 'time_to_return', 'CENSORED')
 cph.print_summary()
 
-"""
-from lifelines.utils.sklearn_adapter import sklearn_adapter
-param_grid = {
-    'penalizer': [0.01, 0.001],#[0, 0.001, 0.002, 0.005, 0.01],  # Range of alpha values 
-    'l1_ratio':[1]#np.arange(0, 1, 0.0) # Choose lasso - for variable selection
-}
-
-base_class = sklearn_adapter(CoxPHFitter, event_col='CENSORED')
-cph = base_class(solver='newton-cg', tol=1e-4)
-
-gcv = GridSearchCV(cph,
-    param_grid=param_grid,
-    cv=3,
-    error_score='raise')
-
-gcv.fit(Xpre_fix, ypre_fix)
-
-best_params = gcv.best_params_
-best_model = gcv.best_estimator_
-
-# Print the best hyperparameters
-print("Best Hyperparameters:")
-print(best_params)
-
-# Print the summary of the best model
-print("\nBest Model Summary:")
-print(best_model.lifelines_model.print_summary())
-
-gcv.fit(Xpre_mob, ypre_mob)
-
-best_params = gcv.best_params_
-best_model = gcv.best_estimator_
-
-# Print the best hyperparameters
-print("Best Hyperparameters:")
-print(best_params)
-
-# Print the summary of the best model
-print("\nBest Model Summary:")
-print(best_model.lifelines_model.print_summary())
-
-gcv.fit(Xintra_fix, yintra_fix)
-
-best_params = gcv.best_params_
-best_model = gcv.best_estimator_
-
-# Print the best hyperparameters
-print("Best Hyperparameters:")
-print(best_params)
-
-# Print the summary of the best model
-print("\nBest Model Summary:")
-print(best_model.lifelines_model.print_summary())
-
-gcv.fit(Xintra_mob, yintra_mob)
-
-best_params = gcv.best_params_
-best_model = gcv.best_estimator_
-
-# Print the best hyperparameters
-print("Best Hyperparameters:")
-print(best_params)
-
-# Print the summary of the best model
-print("\nBest Model Summary:")
-print(best_model.lifelines_model.print_summary())
-"""
